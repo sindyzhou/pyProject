@@ -23,22 +23,4 @@ now.strftime('%Y-%m-%d %H:%M:%S')
 str = "logtime: {}".format(now) + "\n"
 with open("card.txt", "a") as f:
     f.write(str)
-
-
-# tomorrow:
-time.sleep(15)
-
-driver.get('http://oa.koudaikj.com/index.php?m=&c=clock&a=sign')
-
-time.sleep(15)
-login_btn2 = driver.find_element_by_id('login_btn')
-
-login_btn2.click()
-now = datetime.datetime.now()
-now.strftime('%Y-%m-%d %H:%M:%S')
-str = "logtime: {}".format(now) + "\n"
-with open("card.txt", "a") as f:
-    f.write(str)
-
-time.sleep(15)
-driver.quit()
+driver.quite()
